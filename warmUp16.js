@@ -16,3 +16,20 @@
 // Constraints:
 // 1 <= text.length <= 10^4
 // text consists of lower case English letters only.
+function balloonWord(str){
+	var arr = [];
+	var words = ' ';
+	var s = 'balloon';
+	var output = 0;
+  for (var i = 0; i < str.length; i++) {
+     arr.push(str[i])
+  } 
+  for (var i = 0; i < s.length; i++) {
+  	for (var j = 0; j < arr.length; j++) {
+  		if(arr[j] === s[i]){
+  			words = words + arr[j];
+  			s.slice(i+1);
+  		}
+  	}
+  } return words;
+}
