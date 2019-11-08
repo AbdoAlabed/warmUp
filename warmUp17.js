@@ -27,6 +27,21 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
-    
-// };
+ var calculateTime = function(keyboard, word) {
+ 	var count = 0;
+    if(keyboard.length === 26 &&  (word.length >= 1 && word.length <= 10^4 )){
+    for (var i = 0; i < word.length; i++) {
+
+    	for (var j = 0; j < keyboard.length; j++) {
+    	if(word[i] === keyboard[j]){
+    		count +=j;
+    		break;
+    	}
+    }
+}  return count;
+   } 
+   else{
+   	return "you have to add 26 character and spicfic word number";
+   } 
+ }
+ 
